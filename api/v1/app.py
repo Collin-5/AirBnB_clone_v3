@@ -8,6 +8,7 @@ from models import storage
 from api.v1.views import app_views
 from os import getenv
 
+
 app = Flask(__name__)
 CORS(app, origins="0.0.0.0")
 app.register_blueprint(app_views)
@@ -23,5 +24,4 @@ def tear_down(self):
 
 if __name__ == "__main__":
     app.run(host=getenv("HBNB_API_HOST", "0.0.0.0"),
-            port=int(getenv("HBNB_API_PORT", "5000")),
-            threaded=True)
+            port=int(getenv("HBNB_API_PORT", "5000")), threaded=True)
