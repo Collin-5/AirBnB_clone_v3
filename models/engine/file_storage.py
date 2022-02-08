@@ -72,7 +72,7 @@ class FileStorage:
     def get(self, cls, id):
         """Returns the object based on the class and it's id,
         none if note found"""
-        key = cls.__name__ + '.' + id
+        key = cls + '.' + id
         if key in self.__objects:
             return self.__objects[key]
         else:
